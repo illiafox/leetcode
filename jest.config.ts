@@ -5,8 +5,8 @@ import { createDefaultPreset } from "ts-jest";
 const config: Config = {
     ...createDefaultPreset(),
     testMatch: [
-        "<rootDir>/easy/!(*.cases).ts",
-        "<rootDir>/medium/!(*.cases).ts",
+        "<rootDir>/src/easy/!(*.cases).ts",
+        "<rootDir>/src/medium/!(*.cases).ts",
     ],
 };
 
