@@ -43,3 +43,21 @@ impl Solution {
         write_idx as i32
     }
 }
+
+#[test]
+fn test() {
+    let chars = &mut vec!['a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b'];
+    let expected = 4;
+    assert_eq!(Solution::compress(chars), expected);
+    assert_eq!(chars[..expected as usize], vec!['a', 'b', '1', '2']);
+
+    let chars = &mut vec!['a'];
+    let expected = 1;
+    assert_eq!(Solution::compress(chars), expected);
+    assert_eq!(chars[..expected as usize], vec!['a']);
+
+    let chars = &mut vec!['a', 'a', 'b', 'b', 'c', 'c', 'c'];
+    let expected = 6;
+    assert_eq!(Solution::compress(chars), expected);
+    assert_eq!(chars[..expected as usize], vec!['a', '2', 'b', '2', 'c', '3']);
+}
