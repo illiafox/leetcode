@@ -8,7 +8,7 @@ import (
 func TestReverseVowels(t *testing.T) {
 	var cases = [][2]string{
 		{"IceCreAm", "AceCreIm"},
-		{"leetcode", "leotcede1"},
+		{"leetcode", "leotcede"},
 	}
 
 	for _, testCase := range cases {
