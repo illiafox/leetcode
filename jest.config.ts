@@ -4,7 +4,10 @@ import { createDefaultPreset } from "ts-jest";
 
 const config: Config = {
     ...createDefaultPreset(),
-    testMatch: ["<rootDir>/easy/*.ts"],
+    testMatch: [
+        "<rootDir>/easy/!(*.cases).ts",
+        "<rootDir>/medium/!(*.cases).ts",
+    ],
 };
 
 export default config;
