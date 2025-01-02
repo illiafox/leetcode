@@ -1,1 +1,2 @@
 mod string_compression;
+mod product_of_array_except_self;
