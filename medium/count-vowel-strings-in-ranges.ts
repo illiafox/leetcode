@@ -54,7 +54,9 @@ const cases: [string[], number[][], number[]][] = [
 
     ...long_cases,
 ];
-describe("'maxScore'", () => {
+
+
+describe("'vowelStrings'", () => {
     test.each(cases)(
         "given %p as arguments, returns %p",
         (words, queries, expected) => {
