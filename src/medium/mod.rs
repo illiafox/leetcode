@@ -1,2 +1,3 @@
 mod string_compression;
 mod product_of_array_except_self;
+mod number_of_ways_to_split_array;
