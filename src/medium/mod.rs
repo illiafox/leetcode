@@ -1,3 +1,4 @@
-mod string_compression;
-mod product_of_array_except_self;
 mod number_of_ways_to_split_array;
+mod product_of_array_except_self;
+mod string_compression;
+mod unique_length_3_palindromic_subsequences;

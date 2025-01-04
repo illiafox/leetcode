@@ -46,7 +46,9 @@ impl Solution {
 
 #[test]
 fn test() {
-    let chars = &mut vec!['a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b'];
+    let chars = &mut vec![
+        'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b',
+    ];
     let expected = 4;
     assert_eq!(Solution::compress(chars), expected);
     assert_eq!(chars[..expected as usize], vec!['a', 'b', '1', '2']);
@@ -59,5 +61,8 @@ fn test() {
     let chars = &mut vec!['a', 'a', 'b', 'b', 'c', 'c', 'c'];
     let expected = 6;
     assert_eq!(Solution::compress(chars), expected);
-    assert_eq!(chars[..expected as usize], vec!['a', '2', 'b', '2', 'c', '3']);
+    assert_eq!(
+        chars[..expected as usize],
+        vec!['a', '2', 'b', '2', 'c', '3']
+    );
 }
