@@ -5,6 +5,7 @@ struct Solution;
 // https://leetcode.com/problems/unique-length-3-palindromic-subsequences
 
 impl Solution {
+    /// Returns the number of unique palindromes of length three that are a subsequence of s. Works only for strings with lowercase english letters
     pub fn count_palindromic_subsequence(s: String) -> i32 {
         const ENGLISH_LETTERS_COUNT: usize = 26;
 
