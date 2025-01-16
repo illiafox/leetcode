@@ -1,3 +1,4 @@
+mod bitwise_xor_of_all_pairings;
 mod check_if_a_parentheses_string_can_be_valid;
 mod construct_k_palindrome_strings;
 mod find_the_prefix_common_array_of_two_arrays;
