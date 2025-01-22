@@ -4,6 +4,7 @@ mod construct_k_palindrome_strings;
 mod find_the_prefix_common_array_of_two_arrays;
 mod first_completely_painted_row_or_column;
 mod grid_game;
+mod map_of_highest_peak;
 mod minimum_length_of_string_after_operations;
 mod minimum_number_of_operations_to_move_all_balls_to_each_box;
 mod number_of_ways_to_split_array;
