@@ -22,6 +22,8 @@ impl Dsu {
         }
 
         let res = self.find(self.representative[node]);
+
+        // path compression, next find will be faster
         self.representative[node] = res;
 
         res
@@ -33,6 +35,8 @@ impl Dsu {
 
         if node_one == node_two {
             return false;
+
+            // union by size, keep the tree as shallow as possible
         } else if self.size[node_one] > self.size[node_two] {
             self.representative[node_two] = node_one;
             self.size[node_one] += self.size[node_two];
