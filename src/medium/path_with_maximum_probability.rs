@@ -93,3 +93,45 @@ impl Solution {
         0.0
     }
 }
+
+#[test]
+fn test() {
+    let test_cases = [
+        (
+            3,
+            vec![vec![0, 1], vec![1, 2], vec![0, 2]],
+            vec![0.5, 0.5, 0.2],
+            0,
+            2,
+            0.25000,
+        ),
+        (
+            5,
+            vec![
+                vec![1, 4],
+                vec![2, 4],
+                vec![0, 4],
+                vec![0, 3],
+                vec![0, 2],
+                vec![2, 3],
+            ],
+            vec![0.37, 0.17, 0.93, 0.23, 0.39, 0.04],
+            3,
+            4,
+            0.2139,
+        ),
+    ];
+
+    for (n, edges, succ_rates, start, end, expected) in test_cases {
+        // "answer will be accepted if it differs from the correct answer by at most 1e-5"
+        let eps = 1e-5;
+
+        let result = Solution::max_probability(n, edges.clone(), succ_rates.clone(), start, end);
+        assert!(
+            (result - expected).abs() < eps,
+            "failed for input: n: {} edges: {:?}; {result} != {expected}",
+            n,
+            edges
+        );
+    }
+}
