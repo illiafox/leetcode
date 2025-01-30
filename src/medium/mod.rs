@@ -13,6 +13,7 @@ mod maximum_number_of_fish_in_a_grid;
 mod minimum_length_of_string_after_operations;
 mod minimum_number_of_operations_to_move_all_balls_to_each_box;
 mod number_of_ways_to_split_array;
+mod path_with_maximum_probability;
 mod product_of_array_except_self;
 mod redundant_connection;
 mod string_compression;
