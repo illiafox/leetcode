@@ -36,11 +36,5 @@ fn test() {
             "failed for input: nums = {:?}",
             nums
         );
-        assert_eq!(
-            Solution::check(nums.clone()),
-            expected,
-            "failed for input: nums = {:?}",
-            nums
-        );
     }
 }
