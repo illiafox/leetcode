@@ -1,1 +1,2 @@
+mod check_if_array_is_sorted_and_rotated;
 mod special_array_i;
