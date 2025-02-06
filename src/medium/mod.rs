@@ -17,5 +17,6 @@ mod path_with_maximum_probability;
 mod product_of_array_except_self;
 mod redundant_connection;
 mod string_compression;
+mod tuple_with_same_product;
 mod unique_length_3_palindromic_subsequences;
 mod word_subsets;
