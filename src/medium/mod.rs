@@ -4,6 +4,7 @@ mod construct_k_palindrome_strings;
 mod count_servers_that_communicate;
 mod course_schedule_iv;
 mod find_eventual_safe_states;
+mod find_the_number_of_distinct_colors_among_the_balls;
 mod find_the_prefix_common_array_of_two_arrays;
 mod first_completely_painted_row_or_column;
 mod grid_game;
