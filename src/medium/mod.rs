@@ -3,6 +3,7 @@ mod check_if_a_parentheses_string_can_be_valid;
 mod construct_k_palindrome_strings;
 mod count_servers_that_communicate;
 mod course_schedule_iv;
+mod design_a_number_container_system;
 mod find_eventual_safe_states;
 mod find_the_number_of_distinct_colors_among_the_balls;
 mod find_the_prefix_common_array_of_two_arrays;
