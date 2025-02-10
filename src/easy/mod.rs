@@ -1,5 +1,6 @@
 mod check_if_array_is_sorted_and_rotated;
 mod check_if_one_string_swap_can_make_strings_equal;
+mod clear_digits;
 mod longest_strictly_increasing_or_strictly_decreasing_subarray;
 mod maximum_ascending_subarray_sum;
 mod special_array_i;

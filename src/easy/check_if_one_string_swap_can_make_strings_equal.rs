@@ -26,7 +26,6 @@ impl Solution {
 }
 
 #[test]
-
 fn test() {
     let test_cases = [
         ("bank", "kanb", true),
