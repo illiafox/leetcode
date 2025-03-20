@@ -1,3 +1,6 @@
+//go:build cgo
+
+
 char* mergeAlternately(char* word1, char* word2) {
     const int str1_len = strlen(word1);
     const int str2_len = strlen(word2);
