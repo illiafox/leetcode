@@ -1,6 +1,7 @@
 mod bitwise_xor_of_all_pairings;
 mod check_if_a_parentheses_string_can_be_valid;
 mod construct_k_palindrome_strings;
+mod count_good_nodes_in_binary_tree;
 mod count_number_of_bad_pairs;
 mod count_servers_that_communicate;
 mod course_schedule_iv;
