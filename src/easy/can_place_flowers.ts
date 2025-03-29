@@ -12,3 +12,17 @@ function canPlaceFlowers(flowerbed: number[], n: number): boolean {
 
     return n === 0
 };
+
+import {describe, expect, test} from "@jest/globals";
+
+const cases: [number[], number, boolean][] = [
+    [[1, 0, 0, 0, 1], 1, true],
+    [[1, 0, 0, 0, 1], 2, false],
+];
+
+describe("canPlaceFlowers", () => {
+    test.each(cases)("given %p as arguments, returns %p", (flowerbed, n, expected) => {
+        const result = canPlaceFlowers(flowerbed, n);
+        expect(result).toEqual(expected);
+    });
+});
