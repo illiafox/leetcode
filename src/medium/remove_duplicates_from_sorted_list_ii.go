@@ -7,8 +7,29 @@ package medium
  *     Next *ListNode
  * }
  */
-// TODO: too tired today, rework tomorrow
 func deleteDuplicates(head *ListNode) *ListNode {
+	out := &ListNode{Next: head}
+
+	prev := out
+
+	for head != nil {
+		if head.Next != nil && head.Val == head.Next.Val {
+			for head.Next != nil && head.Val == head.Next.Val {
+				head = head.Next
+			}
+
+			prev.Next = head.Next
+		} else {
+			prev = prev.Next
+		}
+
+		head = head.Next
+	}
+
+	return out.Next
+}
+
+func deleteDuplicatesOld(head *ListNode) *ListNode {
 	var beforePrev *ListNode
 	var prev *ListNode
 
