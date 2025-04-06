@@ -4,4 +4,5 @@ mod clear_digits;
 mod longest_strictly_increasing_or_strictly_decreasing_subarray;
 mod maximum_ascending_subarray_sum;
 mod maximum_average_subarray_i;
+mod num_of_recent_calls;
 mod special_array_i;
