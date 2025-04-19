@@ -14,7 +14,7 @@ impl RecentCounter {
     fn ping(&mut self, t: i32) -> i32 {
         self.queue.push_back(t);
 
-        while let (Some(v)) = self.queue.front() {
+        while let Some(v) = self.queue.front() {
             if *v >= (t - 3000) {
                 break;
             }

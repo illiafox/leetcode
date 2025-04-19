@@ -1,6 +1,6 @@
 struct Solution;
 
-fn guess(num: i32) -> i32 {
+fn guess(_: i32) -> i32 {
     panic!("implement me")
 }
 

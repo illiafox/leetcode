@@ -5,6 +5,7 @@ mod construct_k_palindrome_strings;
 mod count_good_nodes_in_binary_tree;
 mod count_number_of_bad_pairs;
 mod count_servers_that_communicate;
+mod count_the_number_of_fair_pairs;
 mod course_schedule_iv;
 mod design_a_number_container_system;
 mod find_eventual_safe_states;
