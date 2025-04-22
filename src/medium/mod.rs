@@ -15,6 +15,7 @@ mod first_completely_painted_row_or_column;
 mod grid_game;
 mod make_lexicographically_smallest_array_by_swapping_elements;
 mod map_of_highest_peak;
+mod maximum_level_sum_of_a_binary_tree;
 mod maximum_number_of_fish_in_a_grid;
 mod minimum_length_of_string_after_operations;
 mod minimum_number_of_operations_to_move_all_balls_to_each_box;
