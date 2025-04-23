@@ -22,6 +22,7 @@ mod maximum_number_of_fish_in_a_grid;
 mod minimum_length_of_string_after_operations;
 mod minimum_number_of_operations_to_move_all_balls_to_each_box;
 mod nearest_exit_from_entrance_in_maze;
+mod number_of_provinces;
 mod number_of_ways_to_split_array;
 mod path_with_maximum_probability;
 mod product_of_array_except_self;
