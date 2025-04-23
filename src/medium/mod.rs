@@ -28,6 +28,7 @@ mod redundant_connection;
 mod remove_all_occurrences_of_a_substring;
 mod removing_stars_from_a_string;
 mod reverse_words_in_a_string;
+mod rotting_oranges;
 mod string_compression;
 mod tuple_with_same_product;
 mod unique_length_3_palindromic_subsequences;
