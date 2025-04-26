@@ -1,6 +1,25 @@
 package medium
 
+// final solution
 func dailyTemperatures(temperatures []int) []int {
+	result := make([]int, len(temperatures))
+
+	var stack []int
+	for i := range temperatures {
+		for len(stack) > 0 && temperatures[i] > temperatures[stack[len(stack)-1]] {
+			prev := stack[len(stack)-1]
+			result[prev] = i - prev
+
+			stack = stack[:len(stack)-1]
+		}
+
+		stack = append(stack, i)
+	}
+
+	return result
+}
+
+func dailyTemperaturesDumb(temperatures []int) []int {
 	result := make([]int, len(temperatures))
 
 	type s struct {
