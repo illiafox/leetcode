@@ -32,6 +32,7 @@ mod removing_stars_from_a_string;
 mod reverse_words_in_a_string;
 mod rotting_oranges;
 mod string_compression;
+mod top_k_frequent_elements;
 mod tuple_with_same_product;
 mod unique_length_3_palindromic_subsequences;
 mod word_subsets;
