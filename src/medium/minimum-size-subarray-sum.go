@@ -1,19 +1,24 @@
 package medium
 
-func lengthOfLongestSubstring(s string) int {
-	maxLength := -1
+import "math"
 
-	dupl := make(map[byte]struct{})
+func minSubArrayLen(target int, nums []int) int {
+	minLength := math.MaxInt
+
 	start := 0
+	sum := 0
 
-	for end := 0; end < len(s); end++ {
-		for _, ok := dupl[s[end]]; ok; _, ok = dupl[s[end]] {
-			delete(dupl, s[start])
+	for end := 0; end < len(nums); end++ {
+		sum += nums[end]
+		for sum >= target {
+			minLength = min(minLength, end-start+1)
+			sum -= nums[start]
 			start++
 		}
-		dupl[s[end]] = struct{}{}
-		maxLength = max(maxLength, end-start+1)
+	}
+	if minLength == math.MaxInt {
+		return 0
 	}
 
-	return max(maxLength, len(dupl))
+	return minLength
 }
