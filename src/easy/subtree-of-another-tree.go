@@ -1,10 +1,4 @@
-package leetcode
-
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+package easy
 
 func isSubtreeCompare(a *TreeNode, b *TreeNode) bool {
 	if a == nil && b == nil {
