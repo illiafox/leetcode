@@ -37,3 +37,4 @@ mod top_k_frequent_elements;
 mod tuple_with_same_product;
 mod unique_length_3_palindromic_subsequences;
 mod word_subsets;
+mod evaluate_reverse_polish_notation;
