@@ -22,6 +22,7 @@ impl Solution {
     }
 }
 
+#[test]
 fn test() {
     let test_cases = [
         (vec![3, 4, 5, 1, 2], true),
