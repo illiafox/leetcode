@@ -15,6 +15,7 @@ mod find_eventual_safe_states;
 mod find_the_number_of_distinct_colors_among_the_balls;
 mod find_the_prefix_common_array_of_two_arrays;
 mod first_completely_painted_row_or_column;
+mod flatten_nested_list_iterator;
 mod grid_game;
 mod keys_and_rooms;
 mod make_lexicographically_smallest_array_by_swapping_elements;
