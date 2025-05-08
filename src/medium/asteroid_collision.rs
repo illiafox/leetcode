@@ -1,19 +1,25 @@
 struct Solution;
 
+use std::cmp::Ordering::{Equal, Less};
+
 impl Solution {
     pub fn asteroid_collision(asteroids: Vec<i32>) -> Vec<i32> {
-        let mut stack = Vec::new();
+        let mut stack: Vec<i32> = Vec::new();
 
         for &ast in &asteroids {
             let mut current = ast;
 
             while let Some(&last) = stack.last() {
                 if last > 0 && current < 0 {
-                    if last < -current {
-                        stack.pop();
-                        continue;
-                    } else if last == -current {
-                        stack.pop();
+                    match last.cmp(&-current) {
+                        Less => {
+                            stack.pop();
+                            continue;
+                        }
+                        Equal => {
+                            stack.pop();
+                        }
+                        _ => {}
                     }
 
                     current = 0;
