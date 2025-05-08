@@ -14,6 +14,7 @@ mod decode_string;
 mod design_a_number_container_system;
 mod evaluate_reverse_polish_notation;
 mod find_eventual_safe_states;
+mod find_peak_element;
 mod find_the_number_of_distinct_colors_among_the_balls;
 mod find_the_prefix_common_array_of_two_arrays;
 mod first_completely_painted_row_or_column;
