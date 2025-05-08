@@ -37,6 +37,7 @@ mod removing_stars_from_a_string;
 mod reverse_words_in_a_string;
 mod rotting_oranges;
 mod simplify_path;
+mod smallest_number_in_infinite_set;
 mod string_compression;
 mod top_k_frequent_elements;
 mod tuple_with_same_product;
