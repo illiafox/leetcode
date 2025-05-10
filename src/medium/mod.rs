@@ -13,6 +13,7 @@ mod course_schedule_iv;
 mod decode_string;
 mod design_a_number_container_system;
 mod distant_barcodes;
+mod domino_and_tromino_tiling;
 mod evaluate_reverse_polish_notation;
 mod find_eventual_safe_states;
 mod find_peak_element;
