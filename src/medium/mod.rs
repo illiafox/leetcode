@@ -37,6 +37,7 @@ mod product_of_array_except_self;
 mod redundant_connection;
 mod remove_all_occurrences_of_a_substring;
 mod removing_stars_from_a_string;
+mod reorder_routes_to_make_all_paths_lead_to_the_city_zero;
 mod reverse_words_in_a_string;
 mod rotting_oranges;
 mod simplify_path;
