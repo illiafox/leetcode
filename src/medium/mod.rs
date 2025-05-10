@@ -11,6 +11,7 @@ mod count_servers_that_communicate;
 mod count_the_number_of_fair_pairs;
 mod course_schedule_iv;
 mod decode_string;
+mod decode_way;
 mod design_a_number_container_system;
 mod distant_barcodes;
 mod domino_and_tromino_tiling;
