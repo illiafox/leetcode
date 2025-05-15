@@ -23,7 +23,6 @@ impl Solution {
 }
 
 #[test]
-
 fn test() {
     let test_cases = [("daabcbaabcbc", "abc", "dab"), ("axxxxyyyyb", "xy", "ab")];
 
