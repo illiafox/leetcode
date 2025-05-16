@@ -51,5 +51,6 @@ mod string_compression;
 mod top_k_frequent_elements;
 mod tuple_with_same_product;
 mod unique_length_3_palindromic_subsequences;
+mod unique_paths_ii;
 mod valid_sudoku;
 mod word_subsets;
