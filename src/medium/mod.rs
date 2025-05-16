@@ -24,6 +24,7 @@ mod first_completely_painted_row_or_column;
 mod flatten_nested_list_iterator;
 mod grid_game;
 mod house_robber;
+mod jump_game;
 mod keys_and_rooms;
 mod kth_largest_element_in_an_array;
 mod make_lexicographically_smallest_array_by_swapping_elements;
