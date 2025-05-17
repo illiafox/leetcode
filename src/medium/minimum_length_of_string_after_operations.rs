@@ -34,7 +34,6 @@ impl Solution {
 }
 
 #[test]
-
 fn test() {
     let test_cases = [
         ("abaacbcbb", 5),
