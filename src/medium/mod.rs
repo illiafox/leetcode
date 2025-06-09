@@ -16,6 +16,7 @@ mod design_a_number_container_system;
 mod distant_barcodes;
 mod domino_and_tromino_tiling;
 mod evaluate_reverse_polish_notation;
+mod find_closest_node_to_given_two_nodes;
 mod find_eventual_safe_states;
 mod find_peak_element;
 mod find_the_number_of_distinct_colors_among_the_balls;
