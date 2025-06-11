@@ -3,6 +3,7 @@ mod check_if_one_string_swap_can_make_strings_equal;
 mod clear_digits;
 mod count_pairs_whose_sum_is_less_than_target;
 mod find_the_difference;
+mod find_words_containing_character;
 mod guess_number_higher_or_lower;
 mod image_smoother;
 mod last_stone_weight;
