@@ -16,3 +16,4 @@ mod range_sum_query_immutable;
 mod robot_return_to_origin;
 mod special_array_i;
 mod valid_anagram;
+mod binary_tree_paths;
