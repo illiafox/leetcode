@@ -1,3 +1,4 @@
+mod binary_tree_paths;
 mod check_if_array_is_sorted_and_rotated;
 mod check_if_one_string_swap_can_make_strings_equal;
 mod clear_digits;
@@ -16,4 +17,3 @@ mod range_sum_query_immutable;
 mod robot_return_to_origin;
 mod special_array_i;
 mod valid_anagram;
-mod binary_tree_paths;
