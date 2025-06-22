@@ -16,4 +16,5 @@ mod palindrome_number;
 mod range_sum_query_immutable;
 mod robot_return_to_origin;
 mod special_array_i;
+mod third_maximum_number;
 mod valid_anagram;
