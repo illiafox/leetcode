@@ -1,8 +1,9 @@
 package medium
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestMaxVowels(t *testing.T) {
@@ -12,7 +13,7 @@ func TestMaxVowels(t *testing.T) {
 		expected int
 	}
 
-	var cases = []testCase{
+	cases := []testCase{
 		{"abciiidef", 3, 3},
 		{"aeiou", 2, 2},
 		{"leetcode", 3, 2},

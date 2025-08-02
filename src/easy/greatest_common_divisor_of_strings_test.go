@@ -1,12 +1,13 @@
 package easy
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestGCDOfStrings(t *testing.T) {
-	var cases = [][3]string{
+	cases := [][3]string{
 		{"ABCABC", "ABC", "ABC"},
 		{"ABABAB", "ABAB", "AB"},
 		{"LEET", "CODE", ""},

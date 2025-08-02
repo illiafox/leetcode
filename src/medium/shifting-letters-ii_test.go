@@ -1,8 +1,9 @@
 package medium
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestReverseVowels(t *testing.T) {
@@ -12,7 +13,7 @@ func TestReverseVowels(t *testing.T) {
 		expect string
 	}
 
-	var cases = []testCase{
+	cases := []testCase{
 		{
 			"abc",
 			[][]int{{0, 1, 0}, {1, 2, 1}, {0, 2, 1}},

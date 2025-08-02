@@ -1,7 +1,7 @@
 package medium
 
 func exist(board [][]byte, word string) bool {
-	var directions = [][2]int{
+	directions := [][2]int{
 		{1, 0}, {-1, 0}, {0, 1}, {0, -1},
 	}
 

@@ -1,7 +1,7 @@
 package easy
 
 func islandPerimeter(grid [][]int) int {
-	var directions = [][2]int{{1, 0}, {-1, 0}, {0, 1}, {0, -1}}
+	directions := [][2]int{{1, 0}, {-1, 0}, {0, 1}, {0, -1}}
 
 	perimeter := 0
 

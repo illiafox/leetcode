@@ -1,8 +1,9 @@
 package medium
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestSuggestedProducts(t *testing.T) {
@@ -12,7 +13,7 @@ func TestSuggestedProducts(t *testing.T) {
 		expected   [][]string
 	}
 
-	var cases = []testCase{
+	cases := []testCase{
 		{
 			[]string{"havana"},
 			"havana",

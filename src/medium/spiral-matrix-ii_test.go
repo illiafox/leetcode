@@ -1,8 +1,9 @@
 package medium
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestGenerateMatrix(t *testing.T) {
@@ -11,7 +12,7 @@ func TestGenerateMatrix(t *testing.T) {
 		expected [][]int
 	}
 
-	var cases = []testCase{
+	cases := []testCase{
 		{
 			3,
 			[][]int{{1, 2, 3}, {8, 9, 4}, {7, 6, 5}},

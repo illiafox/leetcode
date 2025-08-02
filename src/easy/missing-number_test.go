@@ -1,8 +1,9 @@
 package easy
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestMissingNumber(t *testing.T) {
@@ -11,7 +12,7 @@ func TestMissingNumber(t *testing.T) {
 		expect int
 	}
 
-	var cases = []testCase{
+	cases := []testCase{
 		{[]int{3, 0, 1}, 2},
 		{[]int{0, 1}, 2},
 		{[]int{9, 6, 4, 2, 3, 5, 7, 0, 1}, 8},

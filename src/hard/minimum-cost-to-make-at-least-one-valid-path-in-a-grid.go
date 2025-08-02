@@ -41,7 +41,7 @@ func minCost(grid [][]int) int {
 				cost = 0
 			}
 
-			var distance = minCosts[i][j] + cost
+			distance := minCosts[i][j] + cost
 
 			if distance < minCosts[newI][newJ] {
 				minCosts[newI][newJ] = distance

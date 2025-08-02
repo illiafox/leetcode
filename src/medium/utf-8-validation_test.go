@@ -1,8 +1,9 @@
 package medium
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestValidUTF8(t *testing.T) {
@@ -11,7 +12,7 @@ func TestValidUTF8(t *testing.T) {
 		expected bool
 	}
 
-	var cases = []testCase{
+	cases := []testCase{
 		{
 			[]int{197, 130, 1},
 			true,

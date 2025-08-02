@@ -1,8 +1,9 @@
 package medium
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestMinimizeXOR(t *testing.T) {
@@ -11,7 +12,7 @@ func TestMinimizeXOR(t *testing.T) {
 		expected   int
 	}
 
-	var cases = []testCase{
+	cases := []testCase{
 		{
 			3, 5, 3,
 		},

@@ -1,12 +1,13 @@
 package easy
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestRansomNote(t *testing.T) {
-	var cases = []struct {
+	cases := []struct {
 		ransomNote string
 		magazine   string
 

@@ -1,12 +1,13 @@
 package easy
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestReverseVowels(t *testing.T) {
-	var cases = [][2]string{
+	cases := [][2]string{
 		{"IceCreAm", "AceCreIm"},
 		{"leetcode", "leotcede"},
 	}
