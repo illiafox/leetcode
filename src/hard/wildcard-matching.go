@@ -1,7 +1,7 @@
 package hard
 
-// // https://leetcode.com/problems/wildcard-matching/
-func wildcardMatchMemoization(s string, p string) bool {
+// https://leetcode.com/problems/wildcard-matching/
+func wildcardMatch(s string, p string) bool {
 	memo := make(map[[2]int]bool) // [strPos, patternPos]
 
 	var dfs func(strPos, patternPos int) bool
@@ -40,31 +40,4 @@ func wildcardMatchMemoization(s string, p string) bool {
 	}
 
 	return dfs(0, 0)
-}
-
-// https://leetcode.com/problems/wildcard-matching/
-// slow without memoization
-func wildcardMatch(s string, p string) bool {
-	if len(p) == 0 {
-		return len(s) == 0
-	}
-
-	if len(s) == 0 {
-		// only match if p is all '*'
-		for i := 0; i < len(p); i++ {
-			if p[i] != '*' {
-				return false
-			}
-		}
-		return true
-	}
-
-	if p[0] == '*' {
-		// match zero characters or one character
-		return wildcardMatch(s, p[1:]) || wildcardMatch(s[1:], p)
-	}
-
-	firstMatch := s[0] == p[0] || p[0] == '?'
-
-	return firstMatch && wildcardMatch(s[1:], p[1:])
 }

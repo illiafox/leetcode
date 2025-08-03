@@ -30,6 +30,11 @@ func TestIsWildcardMatch(t *testing.T) {
 		{"abc", "*?*", true},
 		{"abc", "*?c", true},
 		{"abc", "*?d", false},
+		{
+			"bbbbbbbabbaabbabbbbaaabbabbabaaabbababbbabbbabaaabaab",
+			"b*b*ab**ba*b**b***bba",
+			false,
+		},
 	}
 
 	for i, test := range tests {
@@ -37,22 +42,6 @@ func TestIsWildcardMatch(t *testing.T) {
 			result := wildcardMatch(test.str, test.pattern)
 			if result != test.expected {
 				t.Errorf("Test %d failed: isMatch(%q, %q) = %v, expected %v",
-					i+1, test.str, test.pattern, result, test.expected)
-			}
-		})
-	}
-
-	tests = append(tests, testCase{
-		"bbbbbbbabbaabbabbbbaaabbabbabaaabbababbbabbbabaaabaab",
-		"b*b*ab**ba*b**b***bba",
-		false,
-	})
-
-	for i, test := range tests {
-		t.Run(test.str+"_"+test.pattern, func(t *testing.T) {
-			result := wildcardMatchMemoization(test.str, test.pattern)
-			if result != test.expected {
-				t.Errorf("Test %d failed: wildcardMatchMemoization(%q, %q) = %v, expected %v",
 					i+1, test.str, test.pattern, result, test.expected)
 			}
 		})
