@@ -43,6 +43,12 @@ func TestIsMatch(t *testing.T) {
 				t.Errorf("Test %d failed: isMatch(%q, %q) = %v, expected %v",
 					i+1, test.str, test.pattern, result, test.expected)
 			}
+
+			result = isMatchMemo(test.str, test.pattern)
+			if result != test.expected {
+				t.Errorf("Test %d failed: isMatchMemo(%q, %q) = %v, expected %v",
+					i+1, test.str, test.pattern, result, test.expected)
+			}
 		})
 	}
 }
