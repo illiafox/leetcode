@@ -1,8 +1,11 @@
 # Leetcode Solutions
 
-My solutions to LeetCode challenges implemented in **Go** (mostly), **Rust** and **TypeScript**
+![LeetCode Stats](https://leetcard.jacoblin.cool/illiafox?theme=light&font=Mali)
 
 [![Tests](https://github.com/illiafox/leetcode/actions/workflows/test.yaml/badge.svg)](https://github.com/illiafox/leetcode/actions/workflows/test.yaml)
+
+My solutions to LeetCode challenges implemented in **Go** (mostly), **Rust** and **TypeScript**
+
 ---
 
 ## License
