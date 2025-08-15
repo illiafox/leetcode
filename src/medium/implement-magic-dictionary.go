@@ -54,6 +54,10 @@ func (dict *MagicDictionary) traverse(t *magickDictTrie, word string, skipped bo
 	return dict.traverse(foundNode, word, skipped)
 }
 
+func MagicDictionaryConstructor() MagicDictionary {
+	return MagicDictionary{new(magickDictTrie)}
+}
+
 // https://leetcode.com/problems/implement-magic-dictionary/description/
 func (dict *MagicDictionary) Search(searchWord string) bool {
 	return dict.traverse(dict.trie, searchWord, false)
