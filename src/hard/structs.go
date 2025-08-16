@@ -40,3 +40,30 @@ func BuildTree(vals []any) *TreeNode {
 
 	return root
 }
+
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
+func listFrom(vals []int) *ListNode {
+	var head, tail *ListNode
+	for _, v := range vals {
+		n := &ListNode{Val: v}
+		if head == nil {
+			head, tail = n, n
+		} else {
+			tail.Next = n
+			tail = n
+		}
+	}
+	return head
+}
+
+func sliceFromList(head *ListNode) []int {
+	var out []int
+	for p := head; p != nil; p = p.Next {
+		out = append(out, p.Val)
+	}
+	return out
+}
