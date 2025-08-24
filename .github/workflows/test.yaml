@@ -42,3 +42,13 @@ jobs:
         with:
           go-version: '^1.23.4' # The Go version to download (if necessary) and use.
       - run: go test ./...
+      - name: Update coverage report
+        uses: ncruces/go-coverage-report@v0
+        with:
+          report: true
+          chart: true
+          amend: true
+        if: |
+          matrix.os == 'ubuntu-latest' &&
+          github.event_name == 'push'
+        continue-on-error: true
