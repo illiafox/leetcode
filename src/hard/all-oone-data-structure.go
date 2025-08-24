@@ -8,13 +8,14 @@ type CountNode struct {
 	Next *CountNode
 }
 
+// https://leetcode.com/problems/all-oone-data-structure/
 type AllOne struct {
 	keyToNode map[string]*CountNode
 	head      *CountNode // min count
 	tail      *CountNode // max count
 }
 
-func Constructor() AllOne {
+func NewAllOne() AllOne {
 	return AllOne{
 		keyToNode: make(map[string]*CountNode),
 		tail:      nil,
