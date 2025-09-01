@@ -30,6 +30,7 @@ mod keys_and_rooms;
 mod kth_largest_element_in_an_array;
 mod make_lexicographically_smallest_array_by_swapping_elements;
 mod map_of_highest_peak;
+mod maximum_average_pass_ratio;
 mod maximum_gap;
 mod maximum_level_sum_of_a_binary_tree;
 mod maximum_number_of_fish_in_a_grid;
