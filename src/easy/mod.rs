@@ -4,6 +4,7 @@ mod check_if_one_string_swap_can_make_strings_equal;
 mod clear_digits;
 mod count_pairs_whose_sum_is_less_than_target;
 mod divide_a_string_into_groups_of_size_k;
+mod find_closest_person;
 mod find_the_difference;
 mod find_words_containing_character;
 mod guess_number_higher_or_lower;
