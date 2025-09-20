@@ -1,16 +1,19 @@
 use std::cmp::Ordering;
 use std::collections::{BinaryHeap, HashMap};
 
+// https://leetcode.com/problems/design-a-food-rating-system
+
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct Food {
-    pub val: i32,
+    pub rating: i32,
     pub name: String,
 }
 
 impl Ord for Food {
     fn cmp(&self, other: &Self) -> Ordering {
-        self.val
-            .cmp(&other.val)
+        // if there is a tie, return the item with the lexicographically smaller name.
+        self.rating
+            .cmp(&other.rating)
             .then_with(|| other.name.cmp(&self.name))
     }
 }
@@ -33,10 +36,10 @@ impl FoodRatings {
         for ((food, cuisine), rating) in foods.into_iter().zip(cuisines).zip(ratings) {
             food_to_cuisine.insert(food.clone(), (cuisine.clone(), rating));
 
-            cuisine_rating.entry(cuisine).or_default().push(Food {
-                name: food,
-                val: rating,
-            });
+            cuisine_rating
+                .entry(cuisine)
+                .or_default()
+                .push(Food { name: food, rating });
         }
 
         FoodRatings {
@@ -54,7 +57,7 @@ impl FoodRatings {
 
         self.cuisine_rating.entry(cuisine).or_default().push(Food {
             name: food,
-            val: new_rating,
+            rating: new_rating,
         });
     }
 
@@ -66,7 +69,7 @@ impl FoodRatings {
 
         while let Some(top) = heap.peek() {
             if let Some((_, cur_rating)) = self.food_to_cuisine.get(&top.name) {
-                if *cur_rating == top.val {
+                if *cur_rating == top.rating {
                     return top.name.clone();
                 }
             }
