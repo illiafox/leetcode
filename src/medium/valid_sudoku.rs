@@ -8,12 +8,11 @@ impl Solution {
         let mut boxes = [0u16; 9];
 
         for r in 0..9 {
-            for c in 0..9 {
-                let ch = board[r][c];
+            for (c, &ch) in board[r].iter().enumerate() {
                 if ch == '.' {
                     continue;
                 }
-                if ch < '1' || ch > '9' {
+                if !('1'..='9').contains(&ch) {
                     return false;
                 }
 
@@ -32,7 +31,6 @@ impl Solution {
         true
     }
 }
-
 
 #[test]
 fn test() {
