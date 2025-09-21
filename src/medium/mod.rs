@@ -14,6 +14,7 @@ mod decode_string;
 mod decode_way;
 mod design_a_food_rating_system;
 mod design_a_number_container_system;
+mod design_task_manager;
 mod distant_barcodes;
 mod domino_and_tromino_tiling;
 mod evaluate_reverse_polish_notation;
