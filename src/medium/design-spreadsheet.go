@@ -43,7 +43,7 @@ func (s *Spreadsheet) GetValue(formula string) int {
 		return 0
 	}
 	sum := 0
-	for _, term := range strings.Split(formula[1:], "+") {
+	for term := range strings.SplitSeq(formula[1:], "+") {
 		t := strings.TrimSpace(term)
 		if t == "" {
 			continue
