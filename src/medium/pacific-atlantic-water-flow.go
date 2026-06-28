@@ -3,7 +3,7 @@ package medium
 // https://leetcode.com/problems/pacific-atlantic-water-flow/
 func pacificAtlanticBFS(queue [][2]int, heights [][]int) [][]bool {
 	visited := make([][]bool, len(heights))
-	for i := 0; i < len(heights); i++ {
+	for i := range heights {
 		visited[i] = make([]bool, len(heights[i]))
 	}
 
@@ -56,7 +56,7 @@ func pacificAtlantic(heights [][]int) (res [][]int) {
 	pacific := pacificAtlanticBFS(pacificQueue, heights)
 	atlantic := pacificAtlanticBFS(atlanticQueue, heights)
 
-	for i := 0; i < len(pacific); i++ {
+	for i := range pacific {
 		for j := 0; j < len(pacific[i]); j++ {
 			if pacific[i][j] && atlantic[i][j] {
 				res = append(res, []int{i, j})

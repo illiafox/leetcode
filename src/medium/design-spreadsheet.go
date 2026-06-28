@@ -11,7 +11,7 @@ type Spreadsheet struct {
 
 func SpreadsheetConstructor(rows int) Spreadsheet {
 	var cols [26]map[int]int
-	for i := 0; i < 26; i++ {
+	for i := range 26 {
 		cols[i] = make(map[int]int)
 	}
 	return Spreadsheet{cols: cols}
@@ -43,7 +43,7 @@ func (s *Spreadsheet) GetValue(formula string) int {
 		return 0
 	}
 	sum := 0
-	for _, term := range strings.Split(formula[1:], "+") {
+	for term := range strings.SplitSeq(formula[1:], "+") {
 		t := strings.TrimSpace(term)
 		if t == "" {
 			continue

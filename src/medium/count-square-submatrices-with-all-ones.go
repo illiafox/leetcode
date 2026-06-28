@@ -9,9 +9,9 @@ func countSquaresDP(a [][]int) int {
 	dp := make([]int, n)
 	total := 0
 
-	for i := 0; i < m; i++ {
+	for i := range m {
 		prevDiag := 0
-		for j := 0; j < n; j++ {
+		for j := range n {
 			up := dp[j]
 
 			if a[i][j] == 0 {
@@ -50,7 +50,7 @@ func isSquareOnes(a [][]int, i, j, side int) bool {
 func countSquares(matrix [][]int) int {
 	count := 0
 
-	for i := 0; i < len(matrix); i++ {
+	for i := range matrix {
 		for j := 0; j < len(matrix[i]); j++ {
 			if matrix[i][j] == 1 {
 				for side := 0; side <= len(matrix); side++ {

@@ -8,7 +8,7 @@ func jump(nums []int) int {
 	}
 
 	steps, curEnd, far := 0, 0, 0
-	for i := 0; i < n; i++ {
+	for i := range n {
 		if distance := i + nums[i]; distance > far {
 			far = distance
 		}

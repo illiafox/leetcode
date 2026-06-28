@@ -16,7 +16,7 @@ func maxFreqSum(s string) int {
 	// a=0, e=4, i=8, o=14, u=20
 	const vowelMask = (1 << 0) | (1 << 4) | (1 << 8) | (1 << 14) | (1 << 20)
 
-	for i := 0; i < len(letters); i++ {
+	for i := range len(letters) {
 		if (vowelMask & (1 << i)) != 0 { // mask with only the i-th bit set
 			maxVowel = max(maxVowel, letters[i])
 		} else {

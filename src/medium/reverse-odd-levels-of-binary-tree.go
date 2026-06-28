@@ -17,7 +17,7 @@ func reverseOddLevels(root *TreeNode) *TreeNode {
 			return root
 		}
 
-		for i := 0; i < levelSize; i++ {
+		for i := range levelSize {
 			queue = append(queue, queue[i].Right, queue[i].Left)
 		}
 

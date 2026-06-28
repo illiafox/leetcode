@@ -6,18 +6,18 @@ func equalPairs(grid [][]int) int {
 	hashedRows := make(map[int][]int)
 	hashedColumns := make(map[int][]int)
 
-	for i := 0; i < n; i++ {
+	for i := range n {
 		s := 0
-		for j := 0; j < n; j++ {
+		for j := range n {
 			s += grid[i][j]
 		}
 
 		hashedRows[s] = append(hashedRows[s], i)
 	}
 
-	for i := 0; i < n; i++ {
+	for i := range n {
 		s := 0
-		for j := 0; j < n; j++ {
+		for j := range n {
 			s += grid[j][i]
 		}
 
@@ -31,7 +31,7 @@ func equalPairs(grid [][]int) int {
 		for _, rowIdx := range v {
 			for _, colIdx := range cols {
 				equal := true
-				for i := 0; i < n; i++ {
+				for i := range n {
 					if grid[rowIdx][i] != grid[i][colIdx] {
 						equal = false
 						break
