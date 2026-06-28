@@ -11,7 +11,7 @@ type Spreadsheet struct {
 
 func SpreadsheetConstructor(rows int) Spreadsheet {
 	var cols [26]map[int]int
-	for i := 0; i < 26; i++ {
+	for i := range 26 {
 		cols[i] = make(map[int]int)
 	}
 	return Spreadsheet{cols: cols}

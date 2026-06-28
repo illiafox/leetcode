@@ -1,7 +1,7 @@
 package easy
 
 func nextGreatestLetter(letters []byte, target byte) byte {
-	for l := 0; l < len(letters); l++ {
+	for l := range letters {
 		if letters[l] > target {
 			return letters[l]
 		}

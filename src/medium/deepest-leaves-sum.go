@@ -61,7 +61,7 @@ func deepestLeavesSumBFS(root *TreeNode) int {
 		sum := 0
 		n := len(queue)
 
-		for i := 0; i < n; i++ {
+		for range n {
 			node := queue[0]
 			queue = queue[1:]
 			sum += node.Val

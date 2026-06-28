@@ -38,7 +38,7 @@ func maximalRectangle(matrix [][]byte) int {
 
 	maxArea := 0
 
-	for i := 0; i < len(matrix); i++ {
+	for i := range matrix {
 		for j := 0; j < len(matrix[i]); j++ {
 			if matrix[i][j] == '1' {
 				heights[j]++

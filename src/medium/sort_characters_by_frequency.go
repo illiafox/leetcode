@@ -38,7 +38,7 @@ func frequencySortInefficient(s string) string {
 		for k, v := range m {
 			if v == n {
 				delete(m, k)
-				for i := 0; i < v; i++ {
+				for range v {
 					builder.WriteByte(k)
 				}
 			}

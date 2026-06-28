@@ -9,7 +9,7 @@ func minimumArea(grid [][]int) int {
 	minCol, maxCol := len(grid[0]), 0
 	minRow, maxRow := len(grid), 0
 
-	for i := 0; i < len(grid); i++ {
+	for i := range grid {
 		for j := 0; j < len(grid[i]); j++ {
 			if grid[i][j] == 1 {
 				minCol = min(minCol, j)

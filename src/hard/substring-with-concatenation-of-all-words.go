@@ -25,7 +25,7 @@ func findSubstring(s string, words []string) []int {
 
 	var res []int
 
-	for offset := 0; offset < wordLength; offset++ {
+	for offset := range wordLength {
 		left := offset
 		matchedCount := 0
 		seen := make(map[string]int)

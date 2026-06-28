@@ -11,7 +11,7 @@ func maxVowels(s string, k int) int {
 
 	var vowelsCount int
 
-	for i := 0; i < k; i++ {
+	for i := range k {
 		if isVowel(s[i]) {
 			vowelsCount++
 		}

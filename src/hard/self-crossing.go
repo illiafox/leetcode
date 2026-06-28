@@ -10,7 +10,7 @@ func isSelfCrossing(distance []int) bool {
 
 	var lines []line
 
-	for i := 0; i < len(distance); i++ {
+	for i := range distance {
 		l := line{
 			x1: x,
 			y1: y,

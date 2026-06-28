@@ -32,7 +32,7 @@ func (c *BinaryTreeEncoder) serialize(root *TreeNode) string {
 	for len(queue) > 0 {
 		l := len(queue)
 
-		for i := 0; i < l; i++ {
+		for i := range l {
 			node := queue[i]
 			if node.Left != nil {
 				vals = append(vals, &node.Left.Val)

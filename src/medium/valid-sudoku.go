@@ -1,11 +1,13 @@
 package medium
 
+import "slices"
+
 // https://leetcode.com/problems/valid-sudoku
 func isValidSudoku(board [][]byte) bool {
 	var rows, cols, blocks [9]uint16
 
-	for i := 0; i < 9; i++ {
-		for j := 0; j < 9; j++ {
+	for i := range 9 {
+		for j := range 9 {
 			elem := board[i][j]
 			if elem == '.' {
 				continue
@@ -49,16 +51,14 @@ func isValidSudokuOld(board [][]byte) bool {
 	}
 
 	for _, row := range board {
-		for _, elem := range row {
-			if check(elem) {
-				return false
-			}
+		if slices.ContainsFunc(row, check) {
+			return false
 		}
 		clear(set)
 	}
 
-	for j := 0; j < 9; j++ {
-		for i := 0; i < 9; i++ {
+	for j := range 9 {
+		for i := range 9 {
 			if check(board[i][j]) {
 				return false
 			}

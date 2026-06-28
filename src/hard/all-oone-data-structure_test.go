@@ -1,15 +1,14 @@
 package hard
 
 import (
+	"slices"
 	"testing"
 )
 
 func oneOf(t *testing.T, got string, expected ...string) {
 	t.Helper()
-	for _, e := range expected {
-		if got == e {
-			return
-		}
+	if slices.Contains(expected, got) {
+		return
 	}
 	t.Fatalf("got %q; want one of %v", got, expected)
 }

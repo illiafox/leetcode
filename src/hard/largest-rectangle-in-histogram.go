@@ -8,7 +8,7 @@ func largestRectangleArea(heights []int) int {
 	stack := []int{0}
 	maxArea := 0
 
-	for i := 0; i < len(indices); i++ {
+	for i := range indices {
 		for len(stack) > 0 && indices[stack[len(stack)-1]] > indices[i] {
 			h := indices[stack[len(stack)-1]]
 			stack = stack[:len(stack)-1]

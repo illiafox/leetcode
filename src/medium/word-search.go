@@ -33,8 +33,8 @@ func exist(board [][]byte, word string) bool {
 		return false
 	}
 
-	for i := 0; i < rows; i++ {
-		for j := 0; j < cols; j++ {
+	for i := range rows {
+		for j := range cols {
 			if board[i][j] == word[0] {
 				visited[i][j] = true
 				if dfs(i, j, 1) {

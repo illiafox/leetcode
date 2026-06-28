@@ -18,7 +18,7 @@ func widthOfBinaryTree(root *TreeNode) int {
 
 		maxWidth = max(maxWidth, lastIndex-firstIndex+1)
 
-		for i := 0; i < levelSize; i++ {
+		for i := range levelSize {
 			node := queue[i].node
 			index := queue[i].index
 

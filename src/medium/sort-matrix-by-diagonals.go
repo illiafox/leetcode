@@ -6,7 +6,7 @@ import "sort"
 // the grid is guaranteed n×n
 func sortMatrix(grid [][]int) [][]int {
 	// bottom-left triangle
-	for y := 0; y < len(grid); y++ {
+	for y := range grid {
 		sort.Sort(diagonalSort{
 			grid:   grid,
 			startY: y,
