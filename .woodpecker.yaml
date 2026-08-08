@@ -1,0 +1,25 @@
+when:
+  - event: push
+
+steps:
+  ts-test:
+    image: node:24
+    commands:
+      - yarn install
+      - yarn test
+
+  rust-test:
+    image: rust:1.97.1
+    environment:
+      CARGO_TERM_COLOR: always
+    commands:
+      - rustup update stable
+      - rustup default stable
+      - cargo test --verbose
+
+  go-test:
+    image: golang:1.26
+    commands:
+      - go test -coverprofile=coverage.out ./...
+      # Print coverage to console (See notes below about the coverage action)
+      - go tool cover -func=coverage.out
