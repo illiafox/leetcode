@@ -4,12 +4,14 @@ when:
 steps:
   ts-test:
     image: node:24
+    depends_on: []
     commands:
       - yarn install
       - yarn test
 
   rust-test:
     image: rust:1.97.1
+    depends_on: []
     environment:
       CARGO_TERM_COLOR: always
     commands:
@@ -19,6 +21,7 @@ steps:
 
   go-test:
     image: golang:1.26
+    depends_on: []
     commands:
       - go test -coverprofile=coverage.out ./...
       # Print coverage to console (See notes below about the coverage action)
