@@ -62,3 +62,5 @@ mod unique_length_3_palindromic_subsequences;
 mod unique_paths_ii;
 mod valid_sudoku;
 mod word_subsets;
+mod minimum_moves_to_clean_the_classroom_first_attempt;
+mod minimum_moves_to_clean_the_classroom_optimized;
