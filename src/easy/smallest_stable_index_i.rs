@@ -35,44 +35,6 @@ impl Solution {
         -1
     }
 
-    pub fn first_stable_index_sec_try(nums: Vec<i32>, k: i32) -> i32 {
-        let mut min_prefix = Vec::with_capacity(nums.len());
-
-        for (i, &n) in nums.iter().rev().enumerate() {
-            if let Some(&prev) = min_prefix.last() {
-                if prev == n && nums.get(nums.len() - i).is_some_and(|&x| n != x) {
-                    min_prefix.push(n);
-                }
-                if prev > n {
-                    min_prefix.push(n);
-                }
-                if prev < n {
-                    min_prefix.push(prev);
-                }
-            } else {
-                min_prefix.push(n);
-            }
-        }
-
-        let mut max_n = nums[0];
-
-        for (i, &n) in nums.iter().enumerate() {
-            max_n = i32::max(max_n, n);
-
-            let min_n = *min_prefix.last().expect("bad stuff happened");
-
-            if max_n - min_n <= k {
-                return i as i32;
-            }
-
-            if n != min_n || nums.get(i + 1).is_some_and(|&x| x != n) {
-                min_prefix.pop();
-            }
-        }
-
-        -1
-    }
-
     pub fn first_stable_index_first_try(nums: Vec<i32>, k: i32) -> i32 {
         let l = nums.len();
 
@@ -87,22 +49,48 @@ impl Solution {
             min_n[l - i - 1] = i32::min(min_n[l - i], nums[l - i - 1]);
         }
 
-        let mut min_index = -1;
-        let mut min_stable = None;
-
         for i in 0..l {
-            let stable = max_n[i] - min_n[i];
-            if stable <= k {
-                if let Some(prev) = min_stable
-                    && prev < stable
-                {
-                    continue;
-                }
-                min_index = i as i32;
-                min_stable = Some(stable);
+            if max_n[i] - min_n[i] <= k {
+                return i as i32;
             }
         }
 
-        min_index
+        -1
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    type SolutionFn = fn(Vec<i32>, i32) -> i32;
+
+    #[test]
+    fn test_all_implementations() {
+        let solutions: &[(&str, SolutionFn)] = &[
+            ("first_stable_index", Solution::first_stable_index),
+            (
+                "first_stable_index_first_try",
+                Solution::first_stable_index_first_try,
+            ),
+        ];
+
+        let test_cases = [
+            (vec![5, 0, 1, 4], 3, 3),
+            (vec![3, 2, 1], 1, -1),
+            (vec![0], 0, 0),
+            (vec![0, 0], 0, 0),
+            (vec![6, 1, 4], 5, 0),
+        ];
+
+        for (fn_name, func) in solutions {
+            for (idx, (nums, k, expected)) in test_cases.iter().enumerate() {
+                let actual = func(nums.clone(), *k);
+                assert_eq!(
+                    actual, *expected,
+                    "[{fn_name}] Failed case #{idx}: nums = {nums:?}, k = {k} (expected {expected}, got {actual})"
+                );
+            }
+        }
     }
 }
