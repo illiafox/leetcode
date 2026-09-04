@@ -17,6 +17,7 @@ mod num_of_recent_calls;
 mod palindrome_number;
 mod range_sum_query_immutable;
 mod robot_return_to_origin;
+mod smallest_stable_index_i;
 mod special_array_i;
 mod third_maximum_number;
 mod valid_anagram;
