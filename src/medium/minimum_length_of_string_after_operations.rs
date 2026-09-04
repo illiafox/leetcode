@@ -38,7 +38,10 @@ fn test() {
     let test_cases = [
         ("abaacbcbb", 5),
         ("aa", 2),
-        ("ucvbutgkohgbcobqeyqwppbxqoynxeuuzouyvmydfhrprdbuzwqebwuiejoxsxdhbmuaiscalnteocghnlisxxawxgcjloevrdcj", 38),
+        (
+            "ucvbutgkohgbcobqeyqwppbxqoynxeuuzouyvmydfhrprdbuzwqebwuiejoxsxdhbmuaiscalnteocghnlisxxawxgcjloevrdcj",
+            38,
+        ),
     ];
 
     for &(input, expected) in &test_cases {

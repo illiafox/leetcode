@@ -1,6 +1,6 @@
 struct Solution;
 
-use std::cmp::{max, Ordering};
+use std::cmp::{Ordering, max};
 use std::collections::BinaryHeap;
 
 #[derive(Eq, PartialEq)]

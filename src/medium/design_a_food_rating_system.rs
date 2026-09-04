@@ -68,10 +68,10 @@ impl FoodRatings {
         };
 
         while let Some(top) = heap.peek() {
-            if let Some((_, cur_rating)) = self.food_to_cuisine.get(&top.name) {
-                if *cur_rating == top.rating {
-                    return top.name.clone();
-                }
+            if let Some((_, cur_rating)) = self.food_to_cuisine.get(&top.name)
+                && *cur_rating == top.rating
+            {
+                return top.name.clone();
             }
             heap.pop();
         }

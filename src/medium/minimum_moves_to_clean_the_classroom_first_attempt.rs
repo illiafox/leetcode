@@ -104,10 +104,10 @@ impl Solution {
 
                     if classroom_chars[new_i][new_j] != OBSTACLE_CELL {
                         let key = (new_i, new_j, task.visited_collectibles);
-                        if let Some(&max_energy) = best_effort.get(&key) {
-                            if max_energy >= task.energy - 1 {
-                                continue;
-                            }
+                        if let Some(&max_energy) = best_effort.get(&key)
+                            && max_energy >= task.energy - 1
+                        {
+                            continue;
                         }
                         best_effort.insert(key, task.energy - 1);
 

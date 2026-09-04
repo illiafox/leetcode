@@ -18,10 +18,10 @@ impl NumberContainers {
     }
 
     fn change(&mut self, index: i32, number: i32) {
-        if let Some(&cur_list) = self.current.get(&index) {
-            if let Some(s) = self.all.get_mut(&cur_list) {
-                s.remove(&index);
-            }
+        if let Some(&cur_list) = self.current.get(&index)
+            && let Some(s) = self.all.get_mut(&cur_list)
+        {
+            s.remove(&index);
         }
 
         self.all.entry(number).or_default().insert(index);

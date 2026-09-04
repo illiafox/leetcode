@@ -131,7 +131,7 @@ mod tests {
         // Push a couple of edits to the same task
         tm.edit(102, 9);
         tm.edit(102, 30); // final intended state
-                          // Top must be the latest (30, task 102) -> user 2
+        // Top must be the latest (30, task 102) -> user 2
         assert_eq!(tm.exec_top(), 2);
         // Then (8, task 101) -> user 1
         assert_eq!(tm.exec_top(), 1);

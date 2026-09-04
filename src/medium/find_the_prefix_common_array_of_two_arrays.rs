@@ -39,10 +39,10 @@ impl Solution {
             let mut common = 0;
 
             for v in b.iter().take(i + 1) {
-                if let Some(f) = map.get(v) {
-                    if *f <= i {
-                        common += 1
-                    }
+                if let Some(f) = map.get(v)
+                    && *f <= i
+                {
+                    common += 1
                 }
             }
 

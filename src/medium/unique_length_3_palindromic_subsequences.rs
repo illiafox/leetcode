@@ -25,11 +25,11 @@ impl Solution {
         let mut count = 0;
 
         for l in 0..first.len() {
-            if let (Some(i), Some(j)) = (first[l], last[l]) {
-                if i < j {
-                    let unique_chars: HashSet<u8> = bytes[i + 1..j].iter().copied().collect();
-                    count += unique_chars.len() as i32;
-                }
+            if let (Some(i), Some(j)) = (first[l], last[l])
+                && i < j
+            {
+                let unique_chars: HashSet<u8> = bytes[i + 1..j].iter().copied().collect();
+                count += unique_chars.len() as i32;
             }
         }
 
@@ -44,11 +44,11 @@ impl Solution {
         let mut count: i32 = 0;
 
         for c in letters {
-            if let (Some(i), Some(j)) = (s.find(c), s.rfind(c)) {
-                if i < j {
-                    let unique_chars: HashSet<&u8> = bytes[i + 1..j].iter().collect();
-                    count += unique_chars.len() as i32;
-                }
+            if let (Some(i), Some(j)) = (s.find(c), s.rfind(c))
+                && i < j
+            {
+                let unique_chars: HashSet<&u8> = bytes[i + 1..j].iter().collect();
+                count += unique_chars.len() as i32;
             }
         }
 
