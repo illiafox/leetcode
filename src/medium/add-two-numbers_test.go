@@ -1,11 +1,11 @@
 package medium
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
-func createListFromArray(values []int) *ListNode {
+func listFromSlice(values []int) *ListNode {
 	var head *ListNode
 	var tail *ListNode
 
@@ -22,16 +22,6 @@ func createListFromArray(values []int) *ListNode {
 	}
 
 	return head
-}
-
-func listToArray(head *ListNode) []int {
-	var result []int
-
-	for current := head; current != nil; current = current.Next {
-		result = append(result, current.Val)
-	}
-
-	return result
 }
 
 func TestAddTwoNumbers(t *testing.T) {
@@ -57,10 +47,10 @@ func TestAddTwoNumbers(t *testing.T) {
 	}
 
 	for _, c := range cases {
-		res := addTwoNumbers(createListFromArray(c.l1), createListFromArray(c.l2))
+		res := addTwoNumbers(listFromSlice(c.l1), listFromSlice(c.l2))
 
-		if !reflect.DeepEqual(listToArray(res), c.expected) {
-			t.Error("case failed: expected", c.expected, "got", listToArray(res))
+		if !slices.Equal(listToSlice(res), c.expected) {
+			t.Error("case failed: expected", c.expected, "got", listToSlice(res))
 		}
 	}
 }
