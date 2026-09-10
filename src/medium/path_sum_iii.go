@@ -9,6 +9,8 @@ package medium
  * }
  */
 
+import "slices"
+
 func pathSumTraverse(root *TreeNode, targetSum int, accumulated []int) int {
 	if root == nil {
 		return 0
@@ -21,8 +23,8 @@ func pathSumTraverse(root *TreeNode, targetSum int, accumulated []int) int {
 		total++
 	}
 
-	for i := len(accumulated) - 1; i >= 0; i-- {
-		s += accumulated[i]
+	for _, a := range slices.Backward(accumulated) {
+		s += a
 		if s == targetSum {
 			total++
 		}

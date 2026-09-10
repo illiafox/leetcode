@@ -1,11 +1,5 @@
 package medium
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
 func checkNode(root *TreeNode, x int) int {
 	if root == nil {
 		return 0

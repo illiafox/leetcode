@@ -42,8 +42,7 @@ func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 		return q
 	}
 
-	for i := len(pathP) - 1; i >= 0; i-- {
-		ptr := pathP[i]
+	for _, ptr := range slices.Backward(pathP) {
 
 		if slices.Contains(pathQ, ptr) {
 			return ptr

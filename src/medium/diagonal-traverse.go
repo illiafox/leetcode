@@ -1,5 +1,7 @@
 package medium
 
+import "slices"
+
 // https://leetcode.com/problems/diagonal-traverse
 func findDiagonalOrder(mat [][]int) []int {
 	rows := len(mat)
@@ -21,8 +23,8 @@ func findDiagonalOrder(mat [][]int) []int {
 		}
 
 		if !down {
-			for i := len(temp) - 1; i >= 0; i-- {
-				out = append(out, temp[i])
+			for _, t := range slices.Backward(temp) {
+				out = append(out, t)
 			}
 		} else {
 			out = append(out, temp...)

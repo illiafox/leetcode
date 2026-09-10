@@ -208,8 +208,8 @@ func TestAllOne_ManyOpsDeterministic(t *testing.T) {
 	}
 
 	// Bring all down to 1, removing as we go, checking edges.
-	for i := len(keys) - 1; i >= 0; i-- {
-		k := keys[i]
+	for i, k := range slices.Backward(keys) {
+
 		for c := i; c > 0; c-- { // reduce k down to 1
 			ao.Dec(k)
 		}
