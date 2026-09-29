@@ -1,3 +1,4 @@
+mod check_if_there_is_a_valid_parentheses_string_path;
 mod divide_nodes_into_the_maximum_number_of_groups;
 mod making_a_large_island;
 mod merge_k_sorted_lists;
